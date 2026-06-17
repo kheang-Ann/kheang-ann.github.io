@@ -30,16 +30,13 @@
               <h4>{{ edu.degree }}</h4>
               <p class="school">{{ edu.school }}</p>
               <p class="year">{{ edu.year }}</p>
-              <p class="gpa" v-if="edu.gpa">GPA: {{ edu.gpa }}</p>
             </div>
           </div>
         </div>
         
         <div class="about-image">
           <div class="image-frame">
-            <div class="profile-placeholder">
-              <span>&lt;/&gt;</span>
-            </div>
+            <img src="../assets/ann.JPG" alt="Ann's Profile" class="profile-image" />
           </div>
         </div>
       </div>
@@ -158,28 +155,19 @@ const profile = profileData;
   position: relative;
 }
 
-.profile-placeholder {
+.profile-image {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #112240, #233554);
+  object-fit: cover;
   border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 3px solid #64ffda;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
-.profile-placeholder:hover {
+.profile-image:hover {
   transform: scale(1.05);
   box-shadow: 0 30px 60px rgba(100, 255, 218, 0.2);
-}
-
-.profile-placeholder span {
-  font-size: 6rem;
-  color: #64ffda;
-  font-family: 'Courier New', monospace;
 }
 
 @media (max-width: 768px) {
@@ -192,13 +180,9 @@ const profile = profileData;
     order: -1;
   }
 
-  .profile-placeholder {
+  .profile-image {
     width: 250px;
     height: 250px;
-  }
-
-  .profile-placeholder span {
-    font-size: 5rem;
   }
 }
 
@@ -207,13 +191,9 @@ const profile = profileData;
     font-size: 1.5rem;
   }
 
-  .profile-placeholder {
+  .profile-image {
     width: 200px;
     height: 200px;
-  }
-
-  .profile-placeholder span {
-    font-size: 4rem;
   }
 }
 </style>

@@ -26,12 +26,12 @@
         <form class="contact-form" @submit.prevent="handleSubmit">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" v-model="formData.name" required placeholder="Your Name" />
+            <input type="text" id="name" v-model="formData.name" required placeholder="Kheang Ann"/>
           </div>
           
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" v-model="formData.email" required placeholder="your.email@example.com" />
+            <input type="email" id="email" v-model="formData.email" required placeholder="kheangann@gmail.com" />
           </div>
           
           <div class="form-group">

@@ -51,7 +51,7 @@
       </div>
       
       <div class="view-more">
-        <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" class="btn-view-more">
+        <a href="https://github.com/kheang-Ann" target="_blank" rel="noopener noreferrer" class="btn-view-more">
           View More on GitHub
         </a>
       </div>

@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <span class="logo-icon">&lt;/&gt;</span>
+        <img src="../assets/ann.JPG" alt="Logo" class="logo-icon-img" />
         <span class="logo-text">{{ profile.name }}</span>
       </div>
       
@@ -71,11 +71,12 @@ const closeMenu = () => {
   color: #64ffda;
 }
 
-.logo-icon {
-  background: linear-gradient(135deg, #64ffda, #00d4ff);
-  padding: 0.3rem 0.6rem;
+.logo-icon-img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
   border-radius: 5px;
-  font-family: 'Courier New', monospace;
+  border: 2px solid #64ffda;
 }
 
 .logo-text {

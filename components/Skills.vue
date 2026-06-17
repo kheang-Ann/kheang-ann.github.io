@@ -24,21 +24,15 @@
             <h3 class="category-title">Frontend</h3>
             <div class="tech-tags">
               <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">React</span>
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">HTML/CSS</span>
-              <span class="tech-tag">TailwindCSS</span>
             </div>
           </div>
           
           <div class="category">
             <h3 class="category-title">Backend</h3>
             <div class="tech-tags">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Nest.js</span>
             </div>
           </div>
           
@@ -48,7 +42,6 @@
               <span class="tech-tag">MongoDB</span>
               <span class="tech-tag">SQL</span>
               <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Firebase</span>
             </div>
           </div>
           
@@ -57,8 +50,6 @@
             <div class="tech-tags">
               <span class="tech-tag">Git</span>
               <span class="tech-tag">Docker</span>
-              <span class="tech-tag">AWS</span>
-              <span class="tech-tag">Linux</span>
               <span class="tech-tag">VS Code</span>
             </div>
           </div>

@@ -27,9 +27,7 @@
       <div class="hero-image">
         <div class="image-container">
           <div class="image-wrapper">
-            <div class="profile-placeholder">
-              <span>&lt;/&gt;</span>
-            </div>
+            <img src="../assets/ann.JPG" alt="Ann's Profile" class="profile-image" />
           </div>
           <div class="image-decoration"></div>
         </div>
@@ -193,28 +191,19 @@ const profile = profileData;
   z-index: 2;
 }
 
-.profile-placeholder {
+.profile-image {
   width: 350px;
   height: 350px;
-  background: linear-gradient(135deg, #112240, #233554);
+  object-fit: cover;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 3px solid #64ffda;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
-.profile-placeholder:hover {
+.profile-image:hover {
   transform: scale(1.05);
   box-shadow: 0 30px 60px rgba(100, 255, 218, 0.2);
-}
-
-.profile-placeholder span {
-  font-size: 8rem;
-  color: #64ffda;
-  font-family: 'Courier New', monospace;
 }
 
 .image-decoration {
@@ -321,13 +310,9 @@ const profile = profileData;
     justify-content: center;
   }
 
-  .profile-placeholder {
+  .profile-image {
     width: 280px;
     height: 280px;
-  }
-
-  .profile-placeholder span {
-    font-size: 6rem;
   }
 }
 
@@ -344,13 +329,9 @@ const profile = profileData;
     flex-direction: column;
   }
 
-  .profile-placeholder {
+  .profile-image {
     width: 220px;
     height: 220px;
-  }
-
-  .profile-placeholder span {
-    font-size: 4rem;
   }
 }
 </style>
