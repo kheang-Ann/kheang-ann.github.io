@@ -12,14 +12,15 @@ export const profileData = {
   location: "Phnom Penh, Cambodia",
   skills: [
     { name: "JavaScript", level: 80 },
-    { name: "Vue.js", level: 85 },
+    { name: "Vue.js", level: 80 },
+    { name: "Flutter", level: 80 },
     { name: "Nest.js", level: 80 },
-    { name: "Python", level: 85 },
+    { name: "Python", level: 70 },
     { name: "Java", level: 70 },
     { name: "C++", level: 65 },
     { name: "SQL", level: 80 },
     { name: "MongoDB", level: 70 },
-    { name: "Git", level: 85 },
+    { name: "Git", level: 80 },
     { name: "Docker", level: 60 }
   ],
   education: [
@@ -34,18 +35,26 @@ export const profileData = {
       year: "2020 - 2023"
     }
   ],
-  experience: [
+  // experience: [
+  //   {
+  //     position: "Software Engineering Intern",
+  //     company: "Tech Innovations Inc.",
+  //     duration: "Summer 2024",
+  //     description: "Developed web applications using Vue.js and Node.js. Collaborated with cross-functional teams."
+  //   },
+  //   {
+  //     position: "Teaching Assistant",
+  //     company: "University of Technology",
+  //     duration: "Fall 2023 - Present",
+  //     description: "Assist students in Data Structures and Algorithms courses. Conduct lab sessions and office hours."
+  //   }
+  // ]
+    experience: [
     {
-      position: "Software Engineering Intern",
-      company: "Tech Innovations Inc.",
-      duration: "Summer 2024",
-      description: "Developed web applications using Vue.js and Node.js. Collaborated with cross-functional teams."
-    },
-    {
-      position: "Teaching Assistant",
-      company: "University of Technology",
-      duration: "Fall 2023 - Present",
-      description: "Assist students in Data Structures and Algorithms courses. Conduct lab sessions and office hours."
+      position: "Full-Stack Mobile Application Developer",
+      company: "Music Platform",
+      duration: "Jan 2026 - Present",
+      description: "Designed and developed a full-stack music application using Flutter, Riverpod, GraphQL, and PostgreSQL. Implemented user authentication, song management, karaoke playback, synchronized lyrics and chords, and responsive cross-platform interfaces. Collaborated with a development team to build scalable frontend and backend features while ensuring a smooth user experience."
     }
   ]
 };
@@ -53,12 +62,12 @@ export const profileData = {
 export const projectsData = [
   {
     id: 1,
-    name: "E-Commerce Platform",
-    description: "A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration.",
-    technologies: ["Vue.js", "Node.js", "Express", "MongoDB", "Stripe API"],
+    name: "VibeFlow App(Team project)",
+    description: "A full-stack music app with user authentication, song management, karaoke playback, chord and lyric display, reference materials, and personalized learning features.",
+    technologies: ["Flutter", "Nest.js", "GraphQL", "MongoDB Atlas", "Github", "VsCode"],
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
     github: "https://github.com/kheang-Ann",
-    live: "https://ecommerce-demo.example.com",
+    //live: "https://ecommerce-demo.example.com",
     featured: true
   },
   {
@@ -68,7 +77,7 @@ export const projectsData = [
     technologies: ["Vue.js", "Firebase", "TailwindCSS", "Vuex"],
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
     github: "https://github.com/kheang-Ann",
-    live: "https://taskmanager-demo.example.com",
+    //live: "https://taskmanager-demo.example.com",
     featured: true
   },
   {
@@ -78,7 +87,7 @@ export const projectsData = [
     technologies: ["Vue.js", "OpenWeatherMap API", "Chart.js", "CSS3"],
     image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=500&h=300&fit=crop",
     github: "https://github.com/kheang-Ann",
-    live: "https://weather-demo.example.com",
+    //live: "https://weather-demo.example.com",
     featured: false
   },
   {
@@ -88,7 +97,7 @@ export const projectsData = [
     technologies: ["Vue.js", "Electron", "SQLite", "Prism.js"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop",
     github: "https://github.com/kheang-Ann",
-    live: null,
+    //live: null,
     featured: false
   },
   {
@@ -98,7 +107,7 @@ export const projectsData = [
     technologies: ["Python", "TensorFlow", "Flask", "Vue.js", "WebSocket"],
     image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=500&h=300&fit=crop",
     github: "https://github.com/kheang-Ann",
-    live: "https://chatbot-demo.example.com",
+    //live: "https://chatbot-demo.example.com",
     featured: true
   },
   {
@@ -108,7 +117,7 @@ export const projectsData = [
     technologies: ["Vue.js", "Vite", "CSS3", "JavaScript"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
     github: "https://github.com/kheang-Ann",
-    live: "https://johndoe.example.com",
+    //live: "https://johndoe.example.com",
     featured: false
   }
 ];

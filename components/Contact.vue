@@ -26,12 +26,12 @@
         <form class="contact-form" @submit.prevent="handleSubmit">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" v-model="formData.name" required placeholder="Kheang Ann"/>
+            <input type="text" id="name" v-model="formData.name" required placeholder="Your name"/>
           </div>
           
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" v-model="formData.email" required placeholder="kheangann@gmail.com" />
+            <input type="email" id="email" v-model="formData.email" required placeholder="Username@gmail.com" />
           </div>
           
           <div class="form-group">
@@ -75,9 +75,23 @@
 
 <script setup>
 import { ref } from 'vue';
+import emailjs from '@emailjs/browser';
 import { profileData, socialLinks } from '../data/mockData.js';
 
 const profile = profileData;
+
+// ============================================================
+// EmailJS Configuration
+// These values are loaded from the .env file (prefixed with VITE_)
+// 1. Sign up at https://www.emailjs.com/ (free tier: 200 emails/month)
+// 2. Create an Email Service (e.g., Gmail) and copy the Service ID
+// 3. Create an Email Template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+// 4. Copy your Public Key from Account > API Keys
+// 5. Put all 3 values in your .env file
+// ============================================================
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const formData = ref({
   name: '',
@@ -92,30 +106,49 @@ const formStatus = ref(null);
 const handleSubmit = async () => {
   isSubmitting.value = true;
   formStatus.value = null;
-  
-  // Simulate form submission (replace with actual API call later)
-  await new Promise(resolve => setTimeout(resolve, 1500));
-  
-  // Mock success response
-  formStatus.value = {
-    type: 'success',
-    message: 'Thank you! Your message has been sent successfully. I will get back to you soon!'
-  };
-  
-  // Reset form
-  formData.value = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
-  
-  isSubmitting.value = false;
-  
-  // Clear status after 5 seconds
-  setTimeout(() => {
-    formStatus.value = null;
-  }, 5000);
+
+  try {
+    // Send real email via EmailJS
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        // These keys must match the {{variable_name}} in your EmailJS template
+        name: formData.value.name,
+        email: formData.value.email,
+        title: formData.value.subject,
+        message: formData.value.message,
+        time: new Date().toLocaleString() // Adds the {{time}} variable from your template
+      },
+      EMAILJS_PUBLIC_KEY
+    );
+
+    formStatus.value = {
+      type: 'success',
+      message: 'Thank you! Your message has been sent successfully. I will get back to you soon!'
+    };
+
+    // Reset form
+    formData.value = {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    };
+  } catch (error) {
+    console.error('EmailJS error:', error);
+    formStatus.value = {
+      type: 'error',
+      message: 'Oops! Something went wrong. Please try again or email me directly.'
+    };
+  } finally {
+    isSubmitting.value = false;
+
+    // Clear status after 5 seconds
+    setTimeout(() => {
+      formStatus.value = null;
+    }, 5000);
+  }
 };
 </script>
 

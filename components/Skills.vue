@@ -24,6 +24,7 @@
             <h3 class="category-title">Frontend</h3>
             <div class="tech-tags">
               <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">Flutter</span>
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">HTML/CSS</span>
             </div>
