@@ -17,8 +17,8 @@
         <p>Built with</p>
         <div class="tech-icons">
           <span class="tech-icon" title="Vue.js">Vue.js</span>
-          <span class="tech-icon" title="Vite">Vite</span>
-          <span class="tech-icon" title="CSS3">CSS3</span>
+          <span class="tech-icon" title="Vite">html</span>
+          <span class="tech-icon" title="CSS3">CSS</span>
         </div>
       </div>
     </div>
