@@ -26,3 +26,10 @@ dist-ssr
 .vercel
 .env
 .env*
+
+# Playwright Test Artifacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+

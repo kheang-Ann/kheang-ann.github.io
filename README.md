@@ -31,7 +31,15 @@ To see exactly how the site will look when optimized for production:
 
 ---
 
-### 3. Deploying Online (Vercel CLI)
+### 3. End-to-End (E2E) Testing with Playwright
+To run automated UI and contact form tests:
+* **Run all tests:** `npm run test:e2e`
+* **Run with interactive UI:** `npm run test:e2e:ui`
+* **View HTML test report:** `npm run test:e2e:report`
+
+---
+
+### 4. Deploying Online (Vercel CLI)
 Because GitHub Pages is currently unavailable due to your account being locked, your website has been successfully deployed to **Vercel**:
 
 * **Live URL:** [https://portfolio-sample-psi-beryl.vercel.app](https://portfolio-sample-psi-beryl.vercel.app)
