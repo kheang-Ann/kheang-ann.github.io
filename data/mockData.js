@@ -49,7 +49,7 @@ export const profileData = {
   //     description: "Assist students in Data Structures and Algorithms courses. Conduct lab sessions and office hours."
   //   }
   // ]
-    experience: [
+  experience: [
     {
       position: "Full-Stack Mobile Application Developer",
       company: "Music Platform",
@@ -65,12 +65,13 @@ export const projectsData = [
     name: "VibeFlow App(Team project)",
     description: "A full-stack music app with user authentication, song management, karaoke playback, chord and lyric display, reference materials, and personalized learning features.",
     technologies: ["Flutter", "Nest.js", "GraphQL", "MongoDB Atlas", "Github", "VsCode"],
-    image: "../assets/Music-App.png",
+    // Uses Vite's dynamic URL constructor to ensure asset path works in production builds
+    image: new URL('../assets/Music-App.png', import.meta.url).href,
     github: "https://github.com/kheang-Ann",
     //live: "https://ecommerce-demo.example.com",
     featured: true
   },
-  // {
+  // {A
   //   id: 2,
   //   name: "Task Management App",
   //   description: "A collaborative task management tool with real-time updates, team collaboration features, and progress tracking.",
