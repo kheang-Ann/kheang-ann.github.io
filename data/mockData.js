@@ -65,7 +65,7 @@ export const projectsData = [
     name: "VibeFlow App(Team project)",
     description: "A full-stack music app with user authentication, song management, karaoke playback, chord and lyric display, reference materials, and personalized learning features.",
     technologies: ["Flutter", "Nest.js", "GraphQL", "MongoDB Atlas", "Github", "VsCode"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+    image: "../assets/Music-App.png",
     github: "https://github.com/kheang-Ann",
     //live: "https://ecommerce-demo.example.com",
     featured: true
